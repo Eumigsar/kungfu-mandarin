@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Kung Fu Mandarin — Esboço</title>
+	<link rel="stylesheet" href="styles.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+SC:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header class="topbar">
+		<div class="brand">
+			<div class="logo" aria-hidden="true">武</div>
+			<div>
+				<div class="brandName">Kung Fu Mandarin</div>
+				<div class="brandTag">Esboço de teste • Mandarim no universo Kung Fu</div>
+			</div>
+		</div>
+		<div class="actions">
+			<button id="btnReset" class="btn ghost" type="button">Reiniciar</button>
+			<button id="btnDaily" class="btn secondary" type="button">Missão do dia</button>
+		</div>
+	</header>
+
+	<main class="shell">
+		<section class="stage">
+			<div class="hero">
+				<div>
+					<div class="kicker">DOJO • CAPÍTULO 0</div>
+					<h1>O Portão do Dojo</h1>
+					<p class="muted">Você entra num pátio silencioso. Lanternas balançam. Um mestre te observa e decide se você é digna(o) de aprender.</p>
+					<div class="pillRow">
+						<span class="pill">HSK1 only</span>
+						<span class="pill">offline</span>
+						<span class="pill">RPG vibe</span>
+					</div>
+				</div>
+				<div class="stats">
+					<div class="stat"><div class="k">XP</div><div id="xp" class="v">0</div></div>
+					<div class="stat"><div class="k">Streak</div><div id="streak" class="v">0</div></div>
+					<div class="stat"><div class="k">Acertos</div><div id="right" class="v">0</div></div>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="row">
+					<div>
+						<div class="muted">Mentor</div>
+						<div class="strong">Mestre Liang</div>
+					</div>
+					<div class="hanziBig">老师</div>
+				</div>
+				<div class="divider"></div>
+				<div id="scene" class="scene"></div>
+			</div>
+
+			<div class="card">
+				<div class="row" style="align-items:flex-end;">
+					<div>
+						<h2>Chat (protótipo)</h2>
+						<p class="muted">Sem IA real por enquanto: respostas guiadas + feedback robusto.</p>
+					</div>
+					<div class="toggleRow">
+						<label class="chk"><input id="toneColor" type="checkbox" checked /> tons coloridos</label>
+						<label class="chk"><input id="hanziFirst" type="checkbox" /> hanzi primeiro</label>
+					</div>
+				</div>
+				<div id="chat" class="chat" aria-live="polite"></div>
+				<form id="composer" class="composer">
+					<input id="input" autocomplete="off" placeholder="Digite: oi • quiz • revisar • como se diz água?" />
+					<button class="btn primary" type="submit">Enviar</button>
+				</form>
+				<div class="muted" style="margin-top:10px;">Dica: responda com pinyin (com/sem tons ou com números) ou hanzi. Ex.: <span class="code">laoshi</span>, <span class="code">lao3shi1</span>, <span class="code">老师</span>.</div>
+			</div>
+		</section>
+
+		<aside class="side">
+			<div class="card">
+				<h2>Direção</h2>
+				<ul>
+					<li><strong>Universo:</strong> Kung Fu / Dojo / disciplina</li>
+					<li><strong>Loop:</strong> missão curta → feedback → XP → teaser</li>
+					<li><strong>Pedagogia:</strong> contexto + reforço positivo + repetição espaçada</li>
+				</ul>
+			</div>
+			<div class="card">
+				<h2>Próximos passos (MVP real)</h2>
+				<ol>
+					<li>Next.js + Supabase Auth</li>
+					<li>SRS + perfil cognitivo</li>
+					<li>IA (OpenAI) com guardrails HSK1</li>
+					<li>Capítulo 1 jogável (visual novel + escolhas)</li>
+				</ol>
+			</div>
+		</aside>
+	</main>
+
+	<footer class="footer">
+		<div class="muted">Esboço de teste • Kung Fu Mandarin • Amanda Alcântara</div>
+	</footer>
+
+	<script src="app.js" defer></script>
+</body>
+</html>
